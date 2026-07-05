@@ -1,0 +1,62 @@
+{
+  "name": "@newalfox/roblox-live-stats",
+  "version": "0.1.0",
+  "description": "Client léger et framework-agnostic pour récupérer les stats de jeux Roblox en temps réel (CCU, visites, favoris, votes) avec batch, rate limiting adaptatif et cache mémoire.",
+  "keywords": [
+    "roblox",
+    "stats",
+    "ccu",
+    "live",
+    "concurrent-users",
+    "visits",
+    "api",
+    "rate-limit",
+    "cache",
+    "typescript"
+  ],
+  "author": "Alane (newalfox)",
+  "license": "MIT",
+  "homepage": "https://github.com/Alane38/roblox-live-stats#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alane38/roblox-live-stats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alane38/roblox-live-stats/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0"
+  },
+  "packageManager": "pnpm@10.15.1"
+}
